@@ -6,6 +6,9 @@ A SwiftUI-based loan calculator application with dark and light theme support, b
 [![Swift Version](https://img.shields.io/badge/Swift-5.5+-orange.svg)](https://swift.org)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+## **Demo 🎥**
+https://github.com/user-attachments/assets/be01acf2-d599-42e4-92b2-9d246cbe473c
+
 ## Screenshots
 
 ### Loans List & Empty State
