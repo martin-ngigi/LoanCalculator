@@ -50,6 +50,7 @@ class LoanViewModel: ObservableObject {
         interestAmount = loan.interestAmount
         loanAmount = "\(loan.amount)"
         repaymentSchedule = loan.repaymentSchedule
+        loanPeriod = "\(loan.loanPeriodMonths)"
         
            let pdfGenerator = LoanPDFGenerator(viewModel: self)
            if let pdfData = pdfGenerator.generatePDFData() {

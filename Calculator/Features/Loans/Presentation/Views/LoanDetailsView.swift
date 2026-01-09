@@ -56,7 +56,7 @@ struct LoanDetailsView: View {
                         
                         DetailRow(
                             label: "Loan Amount",
-                            value: "\(CommonUtils.shared.formatCurrency(loan.totalAmountPayable)) KES",
+                            value: "\(CommonUtils.shared.formatCurrency(loan.amount)) KES",
                             valueColor: Color.theme.greenColor1
                         )
                         

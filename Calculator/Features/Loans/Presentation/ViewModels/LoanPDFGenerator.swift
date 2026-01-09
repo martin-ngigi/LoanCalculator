@@ -60,8 +60,8 @@ class LoanPDFGenerator {
         let logoSize = logoText.size(withAttributes: logoAttributes)
         logoText.draw(at: CGPoint(x: margin, y: 40), withAttributes: logoAttributes)
         
-        // Draw Transaction Advice
-        let adviceText = "Transaction Advice"
+        // Draw Loan Calculation
+        let adviceText = "Loan Calculation"
         let adviceAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.boldSystemFont(ofSize: 20),
             .foregroundColor: UIColor(red: 0.6, green: 0.8, blue: 0.2, alpha: 1.0)
@@ -98,7 +98,7 @@ class LoanPDFGenerator {
         drawLabelValue("Loan Interest (%):", value: "\(Int(viewModel.selectedLoanType?.interestRate ?? 0))%", at: &currentY, leftMargin: margin)
         drawLabelValue("Interest:", value: "\(formatCurrency(viewModel.interestAmount)) KES", at: &currentY, leftMargin: margin)
         drawLabelValue("Loan Amount:", value: "\(formatCurrency(Double(viewModel.loanAmount.replacingOccurrences(of: ",", with: "")) ?? 0)) KES", at: &currentY, leftMargin: margin)
-        drawLabelValue("Loan Period (months):", value: "\(viewModel.selectedLoanType?.title ?? "--") Months", at: &currentY, leftMargin: margin)
+        drawLabelValue("Loan Period (months):", value: "\(viewModel.loanPeriod) Months", at: &currentY, leftMargin: margin)
         
         currentY += 20
         
